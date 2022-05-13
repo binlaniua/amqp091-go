@@ -54,29 +54,14 @@ func makeConsumers() *consumers {
 func (subs *consumers) buffer(in chan *Delivery, out chan Delivery) {
 	defer close(out)
 	defer subs.Done()
-
-	var inflight = in
-	var queue []*Delivery
-
+	// not use queue cache delivery
+	// if consume fast, chan out alway empty
 	for delivery := range in {
-		queue = append(queue, delivery)
-
-		for len(queue) > 0 {
-			select {
-			case <-subs.closed:
-				// closed before drained, drop in-flight
-				return
-
-			case delivery, consuming := <-inflight:
-				if consuming {
-					queue = append(queue, delivery)
-				} else {
-					inflight = nil
-				}
-
-			case out <- *queue[0]:
-				queue = queue[1:]
-			}
+		select {
+		case <-subs.closed:
+			// closed before drained, drop in-flight
+			return
+		case out <- delivery:
 		}
 	}
 }
