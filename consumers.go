@@ -61,7 +61,7 @@ func (subs *consumers) buffer(in chan *Delivery, out chan Delivery) {
 		case <-subs.closed:
 			// closed before drained, drop in-flight
 			return
-		case out <- delivery:
+		case out <- *delivery:
 		}
 	}
 }
