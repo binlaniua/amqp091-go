@@ -1,6 +1,6 @@
 # Go RabbitMQ Client Library
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/rabbitmq/amqp091-go.svg)](https://pkg.go.dev/github.com/rabbitmq/amqp091-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/binlaniua/amqp091-go.svg)](https://pkg.go.dev/github.com/binlaniua/amqp091-go)
 
 This is a Go AMQP 0.9.1 client maintained by the [RabbitMQ core team](https://github.com/rabbitmq).
 It was [originally developed by Sean Treadway](https://github.com/streadway/amqp).
@@ -16,7 +16,7 @@ This library uses a different package name. If moving from `streadway/amqp`,
 using an alias may reduce the number of changes needed:
 
 ``` go
-amqp "github.com/rabbitmq/amqp091-go"
+amqp "github.com/binlaniua/amqp091-go"
 ```
 
 ### License
@@ -90,7 +90,7 @@ please file an issue.
 
 ## Documentation
 
- * [Godoc API reference](http://godoc.org/github.com/rabbitmq/amqp091-go)
+ * [Godoc API reference](http://godoc.org/github.com/binlaniua/amqp091-go)
  * [RabbitMQ tutorials in Go](https://github.com/rabbitmq/rabbitmq-tutorials/tree/master/go) currently use a different client.
     They will be switched to use this client eventually
 

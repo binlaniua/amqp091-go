@@ -4,7 +4,7 @@
 
 Here is the recommended workflow:
 
-1. Fork this repository, **github.com/rabbitmq/amqp091-go**
+1. Fork this repository, **github.com/binlaniua/amqp091-go**
 1. Create your feature branch (`git checkout -b my-new-feature`)
 1. Run Static Checks
 1. Run integration tests (see below)

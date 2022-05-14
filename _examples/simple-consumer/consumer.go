@@ -10,7 +10,7 @@ import (
 	"log"
 	"time"
 
-	amqp "github.com/rabbitmq/amqp091-go"
+	amqp "github.com/binlaniua/amqp091-go"
 )
 
 var (

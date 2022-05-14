@@ -242,7 +242,7 @@ func TestChannelIsClosed(t *testing.T) {
 }
 
 // TestReaderGoRoutineTerminatesWhenMsgIsProcessedDuringClose tests the issue
-// described in https://github.com/rabbitmq/amqp091-go/issues/69.
+// described in https://github.com/binlaniua/amqp091-go/issues/69.
 func TestReaderGoRoutineTerminatesWhenMsgIsProcessedDuringClose(t *testing.T) {
 	const routines = 10
 	c := integrationConnection(t, t.Name())

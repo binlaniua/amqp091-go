@@ -1541,7 +1541,7 @@ func TestDeadlockConsumerIssue48(t *testing.T) {
 // https://github.com/streadway/amqp/issues/46
 func TestRepeatedChannelExceptionWithPublishAndMaxProcsIssue46(t *testing.T) {
 	if strings.Compare(os.Getenv("CI"), "true") == 0 {
-		t.Skip("FLAKY - https://github.com/rabbitmq/amqp091-go/issues/77")
+		t.Skip("FLAKY - https://github.com/binlaniua/amqp091-go/issues/77")
 	}
 	conn := integrationConnection(t, "issue46")
 	if conn != nil {
@@ -1955,7 +1955,7 @@ func TestIntegrationGetNextPublishSeqNo(t *testing.T) {
 	}
 }
 
-// https://github.com/rabbitmq/amqp091-go/pull/44
+// https://github.com/binlaniua/amqp091-go/pull/44
 func TestShouldNotWaitAfterConnectionClosedIssue44(t *testing.T) {
 	conn := integrationConnection(t, "TestShouldNotWaitAfterConnectionClosedIssue44")
 	ch, err := conn.Channel()
@@ -2052,7 +2052,7 @@ func assertConsumeBody(t *testing.T, messages <-chan Delivery, want []byte) (msg
 	return msg
 }
 
-// https://github.com/rabbitmq/amqp091-go/issues/11
+// https://github.com/binlaniua/amqp091-go/issues/11
 func TestShouldNotWaitAfterConnectionClosedNewChannelCreatedIssue11(t *testing.T) {
 	conn := integrationConnection(t, "TestShouldNotWaitAfterConnectionClosedNewChannelCreatedIssue11")
 	ch, err := conn.Channel()
